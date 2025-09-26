@@ -33,6 +33,11 @@ android {
 
     defaultConfig {
         minSdk = 21
+        externalNativeBuild {
+            cmake {
+                arguments.add("-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON")
+            }
+        }
     }
 
     dependencies {
